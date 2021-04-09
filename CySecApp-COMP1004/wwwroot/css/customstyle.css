@@ -1,0 +1,112 @@
+﻿.row > div{
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+}
+
+.Time {
+    text-align: right;
+    font-size: 14pt;
+    font-weight: bold;
+    font-family: arial;
+}
+
+div#page-content-wrapper span.info-1{
+    padding-top: 2rem;
+    text-align: center;
+    font-family: 'Economica', sans-serif;
+}
+
+
+div#page-content-wrapper span.info-2{
+    padding-top: 3rem;
+    text-align: center;
+    font-family: 'Economica', sans-serif;
+}
+
+div#page-content-wrapper span.info-3{
+    padding-top: 2rem;
+    text-align: center;
+    font-family: 'Economica', sans-serif;
+    padding-bottom: 5rem;
+}
+
+#about_us{
+    display: block;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cards{
+    text-align: center;
+}
+
+#Infobtn{
+ margin-right: 1rem;   
+}
+
+#Searchbtn{
+    margin-right: 1rem;
+}
+
+#header{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.page-container{
+    position: relative;
+    height: 100%;
+}
+
+div#page-content-wrapper{
+    padding-bottom: 2.5rem;
+    height: 100%;
+    font-size: 14px;
+    margin-left: 1rem;
+}
+
+.footer {
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+
+#progress{
+    margin-top: 2rem;
+    width: 75%;
+}
+
+#statusbar{
+    width: 1%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+span#healthvalue, #statusvalue {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#buttons{
+    margin-top: 0.5rem;
+}
+
+div#security, #problems, #Userstext{
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#dropdownFitler{
+    background-color: #ffcd42;
+    color: black;
+}

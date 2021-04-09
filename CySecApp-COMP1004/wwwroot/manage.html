@@ -1,0 +1,94 @@
+﻿﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookings</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!--C3 Charts CSS-->
+    <link rel="stylesheet" href="./css/c3.css" type="text/css">
+    <!--Charts JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="js/logins.js"></script>
+    <style>
+        body {
+            justify-content: center;
+        }
+
+        #main {
+            background-color: rgb(222, 222, 222);
+            height: 60%
+        }
+
+        #update form {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main">
+        <h2>Logins</h2>
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#view">View/ Remove Logins</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#update">Add Logins</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="view" class="container tab-pane active">
+                <br>
+                <h3>Logins</h3>
+                <table id="viewtables" class="table">
+                </table>
+
+                <div id="Deletealert" class="toast">
+                    <div class="toast-header">
+                        Update
+                    </div>
+                    <div id="messageedit" class="toast-body">
+                        Deleted User!
+                    </div>
+                </div>
+            </div>
+            <div id="update" class="container tab-pane fade">
+                <br>
+                <h3>Add Account</h3>
+                <form id="booking">
+                    <div class="mb-3">
+                        <label for="FirstNameInput" class="form-label">User Name</label>
+                        <input type="text" class="form-control" id="FirstNameInput" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="LastNameInput" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="LastNameInput" />
+                    </div>
+                    <a id="save" class="btn btn-info"><i class="fas fa-save"></i> Save</a>
+                </form>
+
+                <div id="Savealert" class="toast">
+                    <div class="toast-header">
+                        Update
+                    </div>
+                    <div id="message" class="toast-body">
+                        Saved!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
