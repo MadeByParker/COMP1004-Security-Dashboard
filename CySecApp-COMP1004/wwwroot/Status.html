@@ -46,6 +46,16 @@
           <button id="status" class="btn btn-primary" onclick="online()">Check Network Status</button>
         </div>
       </div>
+
+      <div id="netalert" class="toast" style="position: absolute; top: 150px; right: 10px; min-width: 250px; background-color: #d3d3d3;">
+        <div class="toast-header" style="background-color: gray; color: white;"> 
+          <strong style="font-size: 14px;" class="mr-auto">Update!</strong>
+          <small>Just now</small>
+        </div>
+        <div class="toast-body">
+          <strong><span id="text">Updated Network Status!</span></strong>
+        </div>
+      </div>
   </body>
 </html>
 
@@ -63,11 +73,14 @@ if (i == 0) {
     var id = setInterval(frame, 50);
     function frame() {
       if (width >= 100) {
+        document.getElementById("health").disabled = false;
+        $('.toast').toast({animation: true, delay: 3000});
+        $('.toast').toast('show');
         clearInterval(id);
         i = 0;
         width = 1;
-        alert("Network Diagnosis Complete! Click the Check Status button to see the status");
       } else {
+        document.getElementById("health").disabled = true;
         width++;
         health = width;
         elem.style.width = width + "%";
@@ -91,34 +104,45 @@ function bar(){
     var id = setInterval(frame, 50);
     function frame() {
       if (width >= 100) {
+        document.getElementById("health").disabled = false;
+        $('.toast').toast({animation: true, delay: 3000});
+        $('.toast').toast('show');
         clearInterval(id);
         i = 0;
         width = 1;
-        alert("Network Diagnosis Complete! Click the Check Status button to see the status");
-        document.getElementById("health").disabled = 'false';
       } else {
+        document.getElementById("health").disabled = true;
         width++;
         health = width;
         elem.style.width = width + "%";
         elem.innerHTML = width + "%";
         healthvalue.innerHTML = health + "%";
-        document.getElementById("health").disabled = 'true';
       }
     }
   }
 }
 
+
+
 //button status
 function online(){
-  document.getElementById("health").disabled = 'false';
   if(health > 80){
     statusvalue.innerHTML = "Online!";
+    document.getElementById("text").innerHTML = "It is Online!";
+    $('.toast').toast({animation: true, delay: 3000});
+    $('.toast').toast('show');
   }
   else if(health > 20 && health <= 80){
     statusvalue.innerHTML = "Needs Maintenance!";
+    document.getElementById("text").innerHTML = "Server is in need of Maintenance!";
+    $('.toast').toast({animation: true, delay: 3000});
+    $('.toast').toast('show');
   }
   else{
     statusvalue.innerHTML = "Offline or in Maintanence status!";
+    document.getElementById("text").innerHTML = "Server is currently OFFLINE!";
+    $('.toast').toast({animation: true, delay: 3000});
+    $('.toast').toast('show');
   }
 }
 
