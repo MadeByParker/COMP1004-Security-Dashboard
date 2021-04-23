@@ -110,3 +110,13 @@ div#security, #problems, #Userstext{
     background-color: #ffcd42;
     color: black;
 }
+
+input#dates{
+    padding: 6px;
+    font-size: 14px;
+    width: 50%;
+    border-radius: 4px;
+    box-shadow: none;
+    border: 1px solid rgb(206, 212, 218);
+    margin-bottom: 15px;
+}

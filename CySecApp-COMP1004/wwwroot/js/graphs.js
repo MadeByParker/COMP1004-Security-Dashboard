@@ -1,6 +1,19 @@
 $(document).ready( function(){
 
-    createChart();
+    import "../css/customstyle.css";
+    const start_Date = "01/07/2006";
+    const end_Date = "30/09/2006";
+
+    $('input[name="dates"]').daterangepicker(
+        {
+            startDate: start_Date,
+            endDate: end_Date
+        },
+        function (start, end){
+            createChart(start, end);
+        }
+    );
+
     createChartIP();
     createChartMal();
     
@@ -256,3 +269,4 @@ $(document).ready( function(){
         });
         return {malwaretypes, maldist};
     }
+
