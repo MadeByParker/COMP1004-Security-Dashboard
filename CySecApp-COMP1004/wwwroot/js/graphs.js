@@ -1,22 +1,10 @@
 $(document).ready( function(){
 
-    import "../css/customstyle.css";
-    const start_Date = "01/07/2006";
-    const end_Date = "30/09/2006";
-
-    $('input[name="dates"]').daterangepicker(
-        {
-            startDate: start_Date,
-            endDate: end_Date
-        },
-        function (start, end){
-            createChart(start, end);
-        }
-    );
-
+    createChart();
     createChartIP();
     createChartMal();
-    
+    createweekChart();
+    createMonthChart();
     //creating graphs
     
     async function createChart(){
@@ -75,12 +63,13 @@ $(document).ready( function(){
             }
         });
     }
+
     // Parse local CSV file
     async function retrieveData(){
         const xlabels = [];
         const connections = [];
         const anomalies = [];
-        const connectionsanom = [];
+        const connectionsanom = [];    
         const response = await fetch('cs448b_ipasn_v2.csv');
         const data = await response.text();
         console.log(data);
@@ -90,7 +79,7 @@ $(document).ready( function(){
             const day = row[0];
             const extraday = row[3];
             xlabels.push(day);
-            anomalies.push(extraday)
+            anomalies.push(extraday);
             const connect = row[1];
             const connect2 = row[4];
             connections.push(connect);
@@ -101,9 +90,8 @@ $(document).ready( function(){
         return {xlabels, connections, anomalies, connectionsanom};
     }
     }); 
-    
-    //creating graphs
-    
+
+
     async function createChartIP(){
         const data = await retrieveIPData();
         const ctx = document.getElementById('chartIP').getContext('2d');
@@ -177,6 +165,8 @@ $(document).ready( function(){
         });
     }
     
+
+
     // Parse local CSV file
     async function retrieveIPData(){
         const xlabels = [];
@@ -270,3 +260,171 @@ $(document).ready( function(){
         return {malwaretypes, maldist};
     }
 
+    
+        
+        async function createweekChart(){
+            const data = await retrieveweekData();
+            const ctx = document.getElementById('weekchart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.anomalies,
+                    datasets: [{
+                        label: 'Without anomalies',
+                        data: data.connections,   
+                        borderColor: "#3e95cd",
+                        borderWidth: 1,
+                        fill: false,
+                    },
+                    {
+                        data: data.connectionsanom,
+                        label: "With anomalies",
+                        borderColor: "#c45850",
+                        borderWidth: 1,
+                        fill: false,
+                    }
+                ]
+                },
+                options: {
+                    title:{
+                        display: true,
+                        text: "Connections to business systems by users per day over the last week",
+                        fontSize: 18,
+                    },
+                    scales: {
+                        xAxes: [{
+                            scaleLabel:{
+                                display: true,
+                                labelString: "Dates",
+                                fontStyle: 'bold',
+                            },
+                            ticks: {
+                                fontStyle: 'bold',
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel:{
+                                display: true,
+                                labelString: "Connections to systems",
+                                fontStyle: 'bold',
+                            },
+                            ticks:{
+                                beginAtZero: true,
+                                fontStyle: 'bold',
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+    
+        // Parse local CSV file
+        async function retrieveweekData(){
+            const xlabels = [];
+            const connections = [];
+            const anomalies = [];
+            const connectionsanom = [];    
+            const response = await fetch('cs448b_ipasn_v2.csv');
+            const data = await response.text();
+            console.log(data);
+            const rows = data.split('\n').slice(1);
+            for(var i = 0; i < 7; i++){
+                var elt = rows[i];
+                const row = elt.split(',');
+                const day = row[0];
+                const extraday = row[3];
+                xlabels.push(day);
+                anomalies.push(extraday);
+                const connect = row[1];
+                const connect2 = row[4];
+                connections.push(connect);
+                connectionsanom.push(connect2);
+                console.log(day, connect);
+                console.log(extraday, connect2);
+            }
+            return {xlabels, connections, anomalies, connectionsanom};
+        }
+        
+        async function createMonthChart(){
+            const data = await retrieveMonthData();
+            const ctx = document.getElementById('monthchart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.anomalies,
+                    datasets: [{
+                        label: 'Without anomalies',
+                        data: data.connections,   
+                        borderColor: "#3e95cd",
+                        borderWidth: 1,
+                        fill: false,
+                    },
+                    {
+                        data: data.connectionsanom,
+                        label: "With anomalies",
+                        borderColor: "#c45850",
+                        borderWidth: 1,
+                        fill: false,
+                    }
+                ]
+                },
+                options: {
+                    title:{
+                        display: true,
+                        text: "Connections to business systems by users per day over the last month",
+                        fontSize: 18,
+                    },
+                    scales: {
+                        xAxes: [{
+                            scaleLabel:{
+                                display: true,
+                                labelString: "Dates",
+                                fontStyle: 'bold',
+                            },
+                            ticks: {
+                                fontStyle: 'bold',
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel:{
+                                display: true,
+                                labelString: "Connections to systems",
+                                fontStyle: 'bold',
+                            },
+                            ticks:{
+                                beginAtZero: true,
+                                fontStyle: 'bold',
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+    
+        // Parse local CSV file
+        async function retrieveMonthData(){
+            const xlabels = [];
+            const connections = [];
+            const anomalies = [];
+            const connectionsanom = [];    
+            const response = await fetch('cs448b_ipasn_v2.csv');
+            const data = await response.text();
+            console.log(data);
+            const rows = data.split('\n').slice(1);
+            for(var i = 0; i < 31; i++){
+                var elt = rows[i];
+                const row = elt.split(',');
+                const day = row[0];
+                const extraday = row[3];
+                xlabels.push(day);
+                anomalies.push(extraday);
+                const connect = row[1];
+                const connect2 = row[4];
+                connections.push(connect);
+                connectionsanom.push(connect2);
+                console.log(day, connect);
+                console.log(extraday, connect2);
+            }
+            return {xlabels, connections, anomalies, connectionsanom};
+        }
+        

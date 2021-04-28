@@ -69,3 +69,13 @@ function MalwarePage() {
     $('#page-content-wrapper').load('malware.html');
     document.getElementById("header").innerHTML = "Malware Centre";
 }
+
+function weekhours(){
+    $('#page-content-wrapper').load('UsersLWeek.html');
+    document.getElementById("header").innerHTML = "Last Week";
+}
+
+function monthhours(){
+    $('#page-content-wrapper').load('UserMonth.html');
+    document.getElementById("header").innerHTML = "Last Month";
+}
