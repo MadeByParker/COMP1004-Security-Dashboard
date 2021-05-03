@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Malware</title>
+    <link rel="stylesheet" href="./css/customstyle.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+    <!--JS-->
+    <script src="./js/index.js"></script>
+    <script src="./js/graphs.js"></script>
+    <!--C3 Charts CSS-->
+    <link rel="stylesheet" href="./css/c3.css" type="text/css">
+    <!--Charts JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+    <body>
+    <canvas id="chartIP" width="400" height="100"></canvas>  
+    <a href="https://www.kaggle.com/crawford/computer-network-traffic"><strong>Data taken from here!</strong></a>
+    <br>
+    <div id="Userstext">
+    This graph shows the daily connections of users using their IPs to log on to their work systems
+    Check how many users connect per day <button class="btn btn-primary sm-3" type="button" href='#' id="Usersbtn2" onclick="UserPage()">Users!</button>
+    <br>
+    If there's an anomaly it'll be detected and it will be displayed in <button class="btn btn-primary sm-3" type="button" href='#' id="Infobtn" onclick="AlertsPage()">ALERTS!</button>
+    <br>
+    If there's an current issue with an user or  it'll be detected and it will be displayed in <button class="btn btn-primary sm-3" type="button" href='#' id="Infobtn" onclick="IssuesPage()">ISSUES!</button>
+    </div>
+    <script src="./js/graphs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+        <!--JS-->
+        <script src="./js/index.js"></script>
+        <script src="./js/graphs.js"></script>
+        <!--Charts JavaScript-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

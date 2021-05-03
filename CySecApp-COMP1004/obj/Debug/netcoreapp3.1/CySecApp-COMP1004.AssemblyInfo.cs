@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("8a18239a-b903-4301-9772-15fef1c56a5e")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CySecApp-COMP1004")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

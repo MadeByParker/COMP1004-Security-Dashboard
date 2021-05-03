@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Malware</title>
+    <link rel="stylesheet" href="./css/customstyle.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+</head>
+  <body>
+    <br>
+    <h2>Network Health</h2>
+
+<!--Bar-->
+    <div id="progress" style="width: 75%;">
+        <div id="statusbar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar">1%</div>
+      </div>
+      <br>
+      <span id="healthvalue">0%</span>
+      <br>
+      <div id="buttons">
+        <button id="health" class="btn btn-primary" onclick="bar()">Refresh Network Health</button>
+      </div>
+      <br>
+      <div id="status" style="margin-top: 100px">
+        <h2>Network Status</h2>
+        <br>
+        <span id="statusvalue"></span>
+        <br>
+        <div id="buttons">
+          <button id="status" class="btn btn-primary" onclick="online()">Check Network Status</button>
+        </div>
+      </div>
+
+      <div id="netalert" class="toast" style="position: absolute; top: 150px; right: 10px; min-width: 250px; background-color: #d3d3d3;">
+        <div class="toast-header" style="background-color: gray; color: white;"> 
+          <strong style="font-size: 14px;" class="mr-auto">Update!</strong>
+          <small>Just now</small>
+        </div>
+        <div class="toast-body">
+          <strong><span id="text">Updated Network Status!</span></strong>
+        </div>
+      </div>
+  </body>
+      <!--JS-->
+      <script src="./js/index.js"></script>
+      <script src="./js/graphs.js"></script>
+      <!--Charts JavaScript-->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
+
+<script>
+  
+//bar
+var totalhealth = 0;
+var i = 0;
+var health = 0;
+if (i == 0) { 
+    i = 1;
+    var elem = document.getElementById("statusbar");
+    var width = 1;
+    health = width;
+    var id = setInterval(frame, 50);
+    function frame() {
+      if (width >= 100) {
+        document.getElementById("health").disabled = false;
+        $('.toast').toast({animation: true, delay: 3000});
+        $('.toast').toast('show');
+        clearInterval(id);
+        i = 0;
+        width = 1;
+      } else {
+        document.getElementById("health").disabled = true;
+        width++;
+        health = width;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+        healthvalue.innerHTML = health + "%";
+      }
+    }
+  }
+
+  //button refresh
+function bar(){
+  
+  
+  var i = 0;
+  var health = 0;
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("statusbar");
+    var width = 1;
+    health = width;
+    var id = setInterval(frame, 50);
+    function frame() {
+      if (width >= 100) {
+        document.getElementById("health").disabled = false;
+        $('.toast').toast({animation: true, delay: 3000});
+        $('.toast').toast('show');
+        clearInterval(id);
+        i = 0;
+        width = 1;
+      } else {
+        document.getElementById("health").disabled = true;
+        width++;
+        health = width;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+        healthvalue.innerHTML = health + "%";
+      }
+    }
+  }
+}
+
+
+
+//button status
+function online(){
+  if(health > 80){
+    statusvalue.innerHTML = "Online!";
+    document.getElementById("text").innerHTML = "It is Online!";
+    $('.toast').toast({animation: true, delay: 3000});
+    $('.toast').toast('show');
+  }
+  else if(health > 20 && health <= 80){
+    statusvalue.innerHTML = "Needs Maintenance!";
+    document.getElementById("text").innerHTML = "Server is in need of Maintenance!";
+    $('.toast').toast({animation: true, delay: 3000});
+    $('.toast').toast('show');
+  }
+  else{
+    statusvalue.innerHTML = "Offline or in Maintanence status!";
+    document.getElementById("text").innerHTML = "Server is currently OFFLINE!";
+    $('.toast').toast({animation: true, delay: 3000});
+    $('.toast').toast('show');
+  }
+}
+
+</script>
