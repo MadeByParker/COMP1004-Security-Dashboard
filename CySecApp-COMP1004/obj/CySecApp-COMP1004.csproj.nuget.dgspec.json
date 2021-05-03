@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University Work\\Cyber Security 1st year\\COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004.csproj": {}
+    "D:\\University Work\\Cyber Security 1st year\\COMP1004\\COMP1004-Security-Dashboard\\CySecApp-COMP1004\\CySecApp-COMP1004.csproj": {}
   },
   "projects": {
-    "D:\\University Work\\Cyber Security 1st year\\COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004.csproj": {
+    "D:\\University Work\\Cyber Security 1st year\\COMP1004\\COMP1004-Security-Dashboard\\CySecApp-COMP1004\\CySecApp-COMP1004.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University Work\\Cyber Security 1st year\\COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004.csproj",
+        "projectUniqueName": "D:\\University Work\\Cyber Security 1st year\\COMP1004\\COMP1004-Security-Dashboard\\CySecApp-COMP1004\\CySecApp-COMP1004.csproj",
         "projectName": "CySecApp-COMP1004",
-        "projectPath": "D:\\University Work\\Cyber Security 1st year\\COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004.csproj",
+        "projectPath": "D:\\University Work\\Cyber Security 1st year\\COMP1004\\COMP1004-Security-Dashboard\\CySecApp-COMP1004\\CySecApp-COMP1004.csproj",
         "packagesPath": "C:\\Users\\Harry Parker\\.nuget\\packages\\",
-        "outputPath": "D:\\University Work\\Cyber Security 1st year\\COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004\\obj\\",
+        "outputPath": "D:\\University Work\\Cyber Security 1st year\\COMP1004\\COMP1004-Security-Dashboard\\CySecApp-COMP1004\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
