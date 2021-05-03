@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>CySecApp_COMP1004</RootNamespace>
+    <UserSecretsId>5203b258-16ac-44a2-968a-5c99fc53ca4d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
