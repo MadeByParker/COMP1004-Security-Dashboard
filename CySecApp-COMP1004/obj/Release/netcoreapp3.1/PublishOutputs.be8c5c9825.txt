@@ -19,7 +19,6 @@ D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-C
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\IP.html
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\graphs.js
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\index.js
-D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\logins.js
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css

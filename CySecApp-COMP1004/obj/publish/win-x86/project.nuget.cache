@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "hxLxpWT0V6XaYa9CUtPeccFnUhEp2VjlNMMuM9ZdTpHlR5Sa9QN31l0gG8SXCSoX4LobLa2Igaia39gRTWygMw==",
+  "success": true,
+  "projectFilePath": "D:\\University Work\\Cyber Security 1st year\\COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004\\CySecApp-COMP1004.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Harry Parker\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\3.1.14\\microsoft.netcore.app.runtime.win-x86.3.1.14.nupkg.sha512",
+    "C:\\Users\\Harry Parker\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.14\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.14.nupkg.sha512",
+    "C:\\Users\\Harry Parker\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.14\\microsoft.aspnetcore.app.runtime.win-x86.3.1.14.nupkg.sha512"
+  ],
+  "logs": []
+}

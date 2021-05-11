@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Malware</title>
+    <link rel="stylesheet" href="./css/customstyle.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+  </head>
+    <body>
+    <canvas id="chart" width="400" height="100"></canvas>  
+    <a href="https://www.kaggle.com/crawford/computer-network-traffic"><strong>Data taken from here!</strong></a>
+    <br>
+    <div id="filterDates">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" id="Last24btn" type="button">Last 24 hours</button>
+          <button class="dropdown-item" id="Last7Wbtn" onclick="weekhours()" type="button">Last Week</button>
+          <button class="dropdown-item" id="LastMonthbtn" onclick="monthhours()" type="button">Last Month</button>
+          <button class="dropdown-item" id="AllTimebtn" onclick="UserPage()" type="button">All Time</button>
+        </div>
+      </div>
+    </div>
+    <div id="Userstext">
+    This graph shows the daily connections of users using their IPs to log on to their work systems
+    If there's an anomaly it'll be detected and it will be displayed in <button class="btn btn-primary sm-3" type="button" href='#' id="Infobtn" onclick="AlertsPage()">ALERTS!</button>
+    <br>
+    If there's an current issue with an user or  it'll be detected and it will be displayed in <button class="btn btn-primary sm-3" type="button" href='#' id="Infobtn" onclick="IssuesPage()">ISSUES!</button>
+    </div>
+      <!--JS-->
+      <script src="./js/index.js"></script>
+      <script src="./js/graphs.js"></script>
+      <!--Charts JavaScript-->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    </body>
+</html>

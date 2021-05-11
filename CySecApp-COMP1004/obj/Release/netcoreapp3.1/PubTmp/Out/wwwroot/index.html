@@ -12,15 +12,15 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-
-
         .wrap {
+            margin-top: 100px;
             width: 100%;
             height: 100%;
             display: flex;
@@ -32,7 +32,7 @@
         .login-form {
             width: 350px;
             margin: 0 auto;
-            border: 1px solid #ddd;
+            border: 1px solid rgb(0, 0, 0);
             padding: 2rem;
             background: #ffffff;
         }
@@ -54,10 +54,6 @@
             padding: 10px;
             width: 100%;
             text-transform: uppercase;
-        }
-
-        .form-button:hover {
-            background: #69c8e7;
         }
 
         .form-header {
@@ -99,7 +95,7 @@
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#" id="login" onclick="LoginPage()">Sign In</a>
-                        <a class="dropdown-item" href="#" id="Manage" onclick="ManagePage()">Manage Account</a>
+                        <a class="dropdown-item" href="" id="Manage" onclick="ManagePage()">Manage Account</a>
                         <a class="dropdown-item" href="#">Log Out</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Separated link</a>
@@ -154,17 +150,26 @@
         </div><!--/.wrap-->
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark footer-area">
-        <div class="container">
-                <h5 class="text-uppercase p-1" style="font: normal 500 20px; color: white;">COMP1004 Security Dashboard</h5>
-                <a href="https://github.com/Parker06/CySecApp-COMP1004" target="_blank"; class="btn btn-outline-light btn-floating- m-1 github-btn" role="button" style="font-size: 16px; color: white;">Github Repository | <i class="fab fa-github-square fa-2x"></i></a>
-                <p class="para p-2" style="margin-top: 0.5rem; font-size: 16px; color: white;">
-                    Copyright ©2021 University of Plymouth - only for showcasing purposes | Harry Parker
-                    </a>
-                </p>
+        <!--Footer-->
+        <div class="footer">
+            <div class="inner-footer">
+                <div class="footer-third">
+                    <h1 class="text-uppercase p-1">CySecApp COMP1004 Security Dashboard</h1>
+                </div>
+    
+                <div class="footer-third">
+                    <a href="https://github.com/Parker06/CySecApp-COMP1004" target="_blank"; class="btn btn-outline-light btn-floating- m-1 github-btn" role="button" style="font-size: 16px; color: white;">Github Repository <i class="fab fa-github-square"></i></a>
+                </div>
+    
+                <div class="footer-third">
+                    <p class="para p-2" style="margin-top: 0.5rem; font-size: 16px; color: white;">
+                        Copyright ©2021 University of Plymouth - only for showcasing purposes | Harry Parker
+                    </p>
+                </div>
+            </div>
         </div>
-    </footer>
+        <!--/Footer-->
+
         <!--JS-->
         <script src="./js/index.js"></script>
         <script src="./js/graphs.js"></script>

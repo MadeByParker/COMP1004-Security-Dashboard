@@ -48,8 +48,6 @@ namespace CySecApp_COMP1004
             {
                 endpoints.MapControllers();
             });
-
-            Data.Init();
         }
     }
 }

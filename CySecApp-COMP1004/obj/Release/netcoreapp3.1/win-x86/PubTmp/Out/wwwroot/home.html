@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Security Dashboard</title>
+    <link rel="stylesheet" href="./css/customstyle.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+</head>
+    <body>
+        <!-- Page Contents-->
+        <div id=page-container>
+            <div id="page-content-wrapper">
+                <!--Cards-->
+                <div class="container">
+                    <div class="row col d-flex justify-content-center" style="margin-bottom: 1rem;">
+                        <h3>Overview / General Statistics</h3>
+                        <br>
+                    </div>
+                    <div id="cards" class="row col d-flex justify-content-center">
+                        <div class="card mb-3 bg-primary" style="max-width: 15rem; max-height: 350px;" id="first">
+                            <h3 class="card-header bg-primary" style="color: white;">About Us</h3>
+                            <img src="./img/About-Us.png" width="100%" height="200">
+                            <div class="card-body">
+                                <p class="card-text" style="color: white;">Want to hear more about us? click below!</p>
+                            </div>
+                            <div class="card-body" style="text-align: center;">
+                                <a href="" class="btn btn-primary" type="button" id="Infobtn" onclick="InfoPage()">Go to Page</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3 bg-primary" style="max-width: 15rem;  max-height: 350px;">
+                            <h3 class="card-header bg-primary" style="color: white;">Current Problems</h3>
+                            <img src="./img/Issues.PNG" width="100%" height="200">
+                            <div class="card-body" style="color: white;">
+                                <p class="card-text">View the current issues that the networks are having</p>
+                            </div>
+                            <div class="card-body" style="text-align: center;">
+                                <a href="" class="btn btn-primary" type="button" id="curvulbtn" onclick="IssuesPage()">Go to Page</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3 bg-primary" style="max-width: 15rem; max-height: 350px;">
+                            <h3 class="card-header bg-primary" style="color: white;">Security Alerts</h3>
+                            <img src="./img/Alerts.PNG" width="100%" height="200">
+                            <div class="card-body" style="color: white;">
+                                <p class="card-text">See security alerts that could cause damage.</p>
+                            </div>
+                            <div class="card-body" style="text-align: center;">
+                                <a href="" class="btn btn-primary" type="button" id="alertsbtn" onclick="AlertsPage()">Go to Page</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3 bg-primary" style="max-width: 15rem; max-height: 350px;">
+                            <h3 class="card-header bg-primary" style="color: white;">View Status</h3>
+                            <img src="./img/Status.PNG" width="100%" height="200">
+                            <div class="card-body" style="color: white;">
+                                <p class="card-text">See how the networks and system are currently running!</p>
+                            </div>
+                            <div class="card-body" style="text-align: center;">
+                                <a href="" class="btn btn-primary" type="button" id="statusbtn" onclick="StatusesPage()">Go to Page</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3 bg-primary" style="max-width: 15rem; max-height: 350px;">
+                            <h3 class="card-header bg-primary" style="color: white;">Users</h3>
+                            <img src="./img/Users.PNG" width="100%" height="200">
+                            <div class="card-body">
+                                <p class="card-text" style="color: white;">See the logins over time and the active users</p>
+                            </div>
+                            <div class="card-body" style="text-align: center;">
+                                <a href="" class="btn btn-primary" type="button" id="CardInfobtn" onclick="UserPage()">Go to Page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--JS-->
+        <script src="./js/index.js"></script>
+        <script src="./js/graphs.js"></script>
+        <!--Charts JavaScript-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
