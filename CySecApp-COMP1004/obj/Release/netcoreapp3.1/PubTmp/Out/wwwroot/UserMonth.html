@@ -17,7 +17,7 @@
     <br>
     <div id="filterDates">
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter Dates</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
           <button class="dropdown-item" id="Last24btn" type="button">Last 24 hours</button>
           <button class="dropdown-item" id="Last7Wbtn" onclick="weekhours()" type="button">Last Week</button>
@@ -32,7 +32,9 @@
     <br>
     If there's an current issue with an user or  it'll be detected and it will be displayed in <button class="btn btn-primary sm-3" type="button" href='#' id="Infobtn" onclick="IssuesPage()">ISSUES!</button>
     </div>
+
       <!--JS-->
+      <script src="./js/login.js"></script>
       <script src="./js/index.js"></script>
       <script src="./js/graphs.js"></script>
       <!--Charts JavaScript-->
@@ -41,5 +43,11 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
     </body>
 </html>
