@@ -26,7 +26,6 @@ D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-C
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\bin\Debug\netcoreapp3.1\CySecApp-COMP1004.runtimeconfig.dev.json
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\bin\Debug\netcoreapp3.1\CySecApp-COMP1004.dll
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\bin\Debug\netcoreapp3.1\CySecApp-COMP1004.pdb
-D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Debug\netcoreapp3.1\CySecApp-COMP1004.csprojAssemblyReference.cache
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Debug\netcoreapp3.1\CySecApp-COMP1004.AssemblyInfoInputs.cache
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Debug\netcoreapp3.1\CySecApp-COMP1004.AssemblyInfo.cs
 D:\University Work\Cyber Security 1st year\COMP1004\CySecApp-COMP1004\CySecApp-COMP1004\obj\Debug\netcoreapp3.1\CySecApp-COMP1004.csproj.CoreCompileInputs.cache

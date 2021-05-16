@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Security Dashboard</title>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
     <link rel="stylesheet" href="./css/customstyle.css">
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
@@ -71,30 +76,69 @@
 </head>
 <body>
     <div id="page-content-wrapper">
+        <div id="name" style="text-align: center;">
+            <h1><b>HP Security Solutions <br> Cy-Sec-App <br> Security SEIM Dashboard</b></h1>
+        </div>
 
-        <div class="wrap">
-            <form class="login-form">
-                <div class="form-header">
-                    <h3>Login</h3>
-                    <p>Login to access the dashboard</p>
+        <div class="container" id="main">
+            <h2>Logins</h2>
+            <br>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#signin">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#signup">Signup</a>
+                </li>
+            </ul>
+    
+            
+            <!-- Tab panes -->
+            <div class="tab-content" style="border: solid 3px black; padding: 2rem 2rem 2rem 2rem; margin-top: 2rem;">
+                <div id="signin" class="container tab-pane active">
+                    <h3>Sign into your account</h3>
+                    <br>
+                    <form>
+                        <div class="mb-3">
+                          <label for="email-login" class="form-label">Email address</label>
+                          <input type="email" class="form-control validate" id="email-login"  aria-describedby="emailHelp" value="email@example.com">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="pass-login" class="form-label">Password</label>
+                          <input type="password" class="form-control validate" id="pass-login">
+                        </div>
+                        <a class="btn btn-info" onclick="handleLogin()"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+                      </form>
                 </div>
-                <!--Email Input-->
-                <div class="form-group">
-                    <input type="text" class="form-input" placeholder="Username" id="NameID" minlength="6" required>
+                <div id="signup" class="container tab-pane fade">
+                    <h3>Sign Up (authorised access only)</h3>
+                    <br>
+                    <form>
+                        <div class="mb-3">
+                          <label for="email-signup" class="form-label">Email address</label>
+                          <input type="email" class="form-control validate" id="email-signup" aria-describedby="emailHelp" value="email@example.com">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name-signup" class="form-label">Username</label>
+                            <input type="text" class="form-control validate" id="name-signup" aria-describedby="nameHelp" value="bobdavey12345">
+                            <div id="nameHelp" class="form-text">This is your username and ID</div>
+                          </div>
+                        <div class="mb-3">
+                          <label for="PassSignUp" class="form-label">Password</label>
+                          <input type="password" class="form-control validate" id="PassSignUp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confPass" class="form-label">Password</label>
+                            <input type="password" class="form-control validate" id="confPass">
+                        </div>
+                        <a class="btn btn-info" onclick="handleSignUp()"><i class="fas fa-sign-in-alt"></i> Sign Up</a>
+                      </form>
                 </div>
-                <!--Password Input-->
-                <div class="form-group">
-                    <input type="password" class="form-input" placeholder="Password" id="PassID" minlength="8" required>
-                </div>
-                <!--Login Button-->
-                <div class="form-group">
-                    <button id="login-btn" class="btn btn-primary" type="button" onclick="HomeLogin()">Login</button>
-                </div>
-                <div class="form-footer">
-                    Don't have an account? <a href="#" onclick="LoginHelp()">Find here!</a>
-                </div>
-            </form>
-        </div><!--/.wrap-->
+            </div>
+        </div>
     </div>
 
         <!--JS-->
@@ -107,11 +151,5 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
 </body>
 </html>
