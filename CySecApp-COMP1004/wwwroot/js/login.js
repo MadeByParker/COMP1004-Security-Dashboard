@@ -1,7 +1,6 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-
 var firebaseConfig = {
   apiKey: "AIzaSyAKZg_PjjCfSdJejcZiIx2D3ANeJPXFZcI",
   authDomain: "security-dashboard-97167.firebaseapp.com",
@@ -9,7 +8,7 @@ var firebaseConfig = {
   storageBucket: "security-dashboard-97167.appspot.com",
   messagingSenderId: "109877111062",
   appId: "1:109877111062:web:dbfaa2aecfad0bd6df8837",
-  measurementId: "G-4YXC68LGZD"
+  measurementId: "G-4YXC68LGZD",
 };
 
 // Initialize Firebase
@@ -62,27 +61,28 @@ window.onpopstate = function (e) {
   }
 };
 
-
-function handleLogin(e){
+function handleLogin(e) {
   const login = document.getElementById("email-login").value;
   const pass = document.getElementById("pass-login").value;
-  console.log({login, pass});
-  firebase.auth().signInWithEmailAndPassword(login, pass)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    console.log(user);
-    uid = user.uid;
-    renderPage("homePanel");
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    console.log(errorMessage);
-  });
+  console.log({ login, pass });
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(login, pass)
+    .then((userCredential) => {
+      // Signed in
+      var user = userCredential.user;
+      console.log(user);
+      uid = user.uid;
+      renderPage("homePanel");
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+    });
 }
 
-function handleSignUp(e){
+function handleSignUp(e) {
   const login = document.getElementById("email-signup").value;
   const name = document.getElementById("name-signup").value;
   const pass = document.getElementById("PassSignUp").value;
@@ -109,7 +109,7 @@ function handleSignUp(e){
         })
         .then((user) => {
           console.log(user.id);
-        })
+        });
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -118,4 +118,3 @@ function handleSignUp(e){
       // ..
     });
 }
-
