@@ -82,3 +82,4 @@ function monthhours() {
   $("#page-content-wrapper").load("UserMonth.html");
   document.getElementById("header").innerHTML = "Last Month";
 }
+

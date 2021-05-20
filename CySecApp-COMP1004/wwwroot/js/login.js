@@ -1,5 +1,7 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const signin = false;
+
 
 var firebaseConfig = {
   apiKey: "AIzaSyAKZg_PjjCfSdJejcZiIx2D3ANeJPXFZcI",
@@ -46,8 +48,8 @@ async function renderPage(pageSlug) {
     html = "<h1>404 Page not found</h1>";
   }
   window.history.pushState(
-    { html, pageTitle: "PALS Cafe" },
-    "PALS Cafe",
+    { html, pageTitle: "Security Dashboard" },
+    "Security Dashboard",
     pageSlug
   ); // Push the new page into the window's history, this will allow the user to go back
   document.getElementById("page-content-wrapper").innerHTML = html;
@@ -74,11 +76,13 @@ function handleLogin(e) {
       console.log(user);
       uid = user.uid;
       renderPage("homePanel");
+
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorMessage);
+      alert("Password is incorrect!")
     });
 }
 
@@ -89,6 +93,11 @@ function handleSignUp(e) {
   const confPass = document.getElementById("confPass").value;
   if (pass !== confPass) {
     alert("Passwords do not match!");
+    return;
+  }
+
+  if(pass == confPass && pass.length < 6){
+    alert("Password should be at least 6 characters!");
     return;
   }
   console.log({ login, pass, confPass, name });
