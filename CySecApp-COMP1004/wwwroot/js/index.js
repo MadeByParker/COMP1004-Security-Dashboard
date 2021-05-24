@@ -1,21 +1,26 @@
 ﻿$(document).ready()(function () {
+  //clock
   function updateClock() {
     var today = new Date();
     document.getElementById("dTime").innerHTML = today.toLocaleString();
     setTimeout(updateClock, 1000);
   }
   updateClock();
+
+  $(".dropdown").hover(function(){
+    var dropdownMenu = $(this).children(".dropdown-menu");
+    if(dropdownMenu.is(":visible")){
+        dropdownMenu.parent().toggleClass("open");
+    }
+});
 });
 
-function LoginHelp() {
-  alert(
-    "Contact your system adminstrator to find out if you're eligible for access!"
-  );
-}
 
+
+//switch pages
 function LoginPage() {
   document.getElementById("header").innerHTML = "Sign In";
-  $("#page-content-wrapper").load("login.html");
+  $("#page-content-wrapper").load("app.html");
 }
 
 function HomeLogin() {
@@ -39,7 +44,7 @@ function StatusesPage() {
 }
 
 function IssuesPage() {
-  $("#page-content-wrapper").load("Current.html");
+  $("#page-content-wrapper").load("Issues.html");
   document.getElementById("header").innerHTML = "Current Problems";
 }
 
@@ -59,7 +64,7 @@ function InfoPage() {
 }
 
 function ManagePage() {
-  $("#page-content-wrapper").load("Manage.html");
+  $("#page-content-wrapper").load("manage.html");
   document.getElementById("header").innerHTML = "System Management";
 }
 

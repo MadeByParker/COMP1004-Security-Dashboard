@@ -57,6 +57,12 @@
 }
   /*cards*/
 
+/*navbar*/
+#navbarTop:hover #dp-menu{
+    display: block;
+}
+
+
 .row > div{
     margin-inline-start: 1rem;
     margin-inline-end: 1rem;
@@ -238,3 +244,107 @@ div#security, #problems, #Userstext{
         margin-bottom: 30px;
     }
 }
+
+/*tables*/
+
+.striped {
+    border-collapse: collapse;
+    margin: 50px 2.5rem;
+    font-size: 0.9em;
+    color: black;
+    width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .striped thead tr {
+    background-color: #9c9c9c;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .striped th,
+  .striped td {
+    padding: 12px 15px;
+  }
+  
+  .striped tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .striped tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .striped tbody tr:last-of-type {
+    border-bottom: 2px solid #949494;
+  }
+  
+  .striped tbody tr:hover td:not(:last-child) {
+    font-weight: bold;
+    background-color: rgb(201, 201, 201);
+  }
+
+  .striped tr i{
+    top: 0;
+    right: 0px;
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}
+
+    .striped tr i:hover{
+        color: red;
+    }
+
+
+/*footer and general*/
+* {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  .page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -142px; 
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
+  .site-footer, .page-wrap:after {
+    height: 160px; 
+  }
+  .site-footer {
+    background: rgb(189, 189, 189);
+    width: 70%;
+    margin: 0 auto;
+  }
+
+    /* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(170, 170, 170);
+    border-radius: 15px;
+    border: 5px solid transparent white;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(128, 128, 128);
+  }
+  
+  
