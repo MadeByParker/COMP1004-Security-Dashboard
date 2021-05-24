@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Malware</title>
+    <link rel="stylesheet" href="./css/customstyle.css" />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div id="problems">
+      <br />
+      <h3 style="margin-left: 1rem"></h3>
+      <ul>
+        <li style="margin-bottom: 10px">
+          Network Status may need fixing -
+          <button
+            class="btn btn-outline-primary btn-sm"
+            type="button"
+            href="#"
+            id="Infobtn"
+            onclick="StatusesPage()"
+          >
+            Check Status
+          </button>
+        </li>
+        <li style="margin-bottom: 10px">
+          May need to scan for malware -
+          <button
+            class="btn btn-outline-primary btn-sm"
+            type="button"
+            href="#"
+            id="Malwarebtn"
+            onclick="MalwarePage()"
+          >
+            Check for Malware
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!--JS-->
+    <script src="./js/login.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/graphs.js"></script>
+    <!--Charts JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+  </body>
+</html>
