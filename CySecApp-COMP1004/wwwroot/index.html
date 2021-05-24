@@ -10,9 +10,13 @@
     <title>Security Dashboard</title>
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <!-- <Firebase> -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+  
+      <!-- </Firebase> -->
+   
     <link rel="stylesheet" href="./css/customstyle.css" />
     <!-- CSS only -->
     <link
@@ -38,69 +42,21 @@
         box-sizing: border-box;
       }
 
-      .wrap {
-        margin-top: 100px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #fafafa;
-      }
-
-      .login-form {
-        width: 350px;
-        margin: 0 auto;
-        border: 1px solid rgb(0, 0, 0);
-        padding: 2rem;
-        background: #ffffff;
-      }
-
-      .form-input {
-        background: #fafafa;
-        border: 1px solid #eeeeee;
-        padding: 12px;
-        width: 100%;
-      }
-
-      .form-group {
-        margin-bottom: 1rem;
-      }
-
-      #login-btn {
-        border: 1px solid #ddd;
-        color: #ffffff;
-        padding: 10px;
-        width: 100%;
+      #github{
+        font-size: 20px;
+        color: black;
         text-transform: uppercase;
-      }
 
-      .form-header {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-
-      .form-footer {
-        text-align: center;
       }
     </style>
   </head>
   <body>
+
+    <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#" id="homebtn" onclick="HomePage()"
+      <a class="navbar-brand" href="#" id="homePanel" onclick="HomePage()"
         >Cy-Sec-App Home</a
       >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarColor01"
-        aria-controls="navbarColor01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -109,59 +65,38 @@
               aria-current="page"
               href="#"
               onclick="IssuesPage()"
-              id="curvulbtn"
-              >Current <br />
-              Problems</a
-            >
+              id="Issues">Current <br />
+              Problems</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="alertsbtn" onclick="AlertsPage()"
+            <a class="nav-link" href="#" id="alerts" onclick="AlertsPage()"
               >Security <br />
               Alerts</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="StatusesPage()" id="statusbtn"
-              >Service <br />
-              Statuses</a
-            >
+            <a class="nav-link" href="#" onclick="StatusesPage()" id="Status">
+              Service <br />
+              Statuses</a>
           </li>
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >User <br />
-              information</a
-            >
-            <div class="dropdown-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarTop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User <br />
+              Information</a>
+            <div class="dropdown-menu" id="dp-menu" aria-labelledby="navbarDropdown2">
               <a class="dropdown-item" href="#" id="Users" onclick="UserPage()"
-                >List of Users</a
-              >
-              <a class="dropdown-item" href="#" id="Manage" onclick="IPPage()"
-                >IP Connections</a
-              >
-              <a
-                class="dropdown-item"
-                href="#"
-                id="Malware"
-                onclick="MalwarePage()"
-                >Malware</a
-              >
+                >List of Users</a>
+              <a class="dropdown-item" href="#" id="IP" onclick="IPPage()"
+                >IP Connections</a>
+              <a class="dropdown-item" href="#" id="Malware" onclick="MalwarePage()">Malware</a>
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="login" onclick="LoginPage()"
-              >Sign In</a
-            >
+              >Sign In</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="" id="Manage" onclick="ManagePage()"
-              >Manage Account</a
-            >
+              >Manage Account</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Log Out</a>
@@ -172,39 +107,44 @@
           type="button"
           href="#"
           id="Infobtn"
-          onclick="InfoPage()"
-        >
+          onclick="InfoPage()">
           About Us
         </button>
       </div>
     </nav>
+    <!--/Navbar-->
+
+    <!--Date-->
     <div class="Time">
       Today's date is:
       <span id="dTime"> </span>
     </div>
+
+    <!--Header-->
     <div id="header">
       <h1>Home</h1>
     </div>
+
+    <!--Body-->
     <div id="page-content-wrapper">
       <div id="name" style="text-align: center">
         <h1>
           <b
             >HP Security Solutions <br />
             Cy-Sec-App <br />
-            Security SEIM Dashboard</b
-          >
+            Security SEIM Dashboard</b>
         </h1>
       </div>
 
       <div class="container" id="main">
-        <h2>Logins</h2>
+        <br>
+        <h2>Login into your account</h2>
         <br />
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#signin"
-              >Sign In</a
-            >
+              >Sign In</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#signup">Sign Up</a>
@@ -217,36 +157,33 @@
           style="
             border: solid 3px black;
             padding: 2rem 2rem 2rem 2rem;
-            margin-top: 2rem;
-          "
-        >
+            margin-top: 2rem;"">
           <div id="signin" class="container tab-pane active">
             <h3>Sign into your account</h3>
             <br />
             <form>
               <div class="mb-3">
                 <label for="email-login" class="form-label"
-                  >Email address</label
-                >
+                  >Email address </label><label style="color: red">  *</label>
                 <input
                   type="email"
                   class="form-control validate"
                   id="email-login"
                   aria-describedby="emailHelp"
-                  value="email@example.com"
-                />
+                  value="email@example.com"/>
                 <div id="emailHelp" class="form-text">
                   We'll never share your email with anyone else.
                 </div>
               </div>
               <div class="mb-3">
-                <label for="pass-login" class="form-label">Password</label>
+                <label for="pass-login" class="form-label">Password </label><label style="color: red">  *</label>
                 <input
                   type="password"
                   class="form-control validate"
-                  id="pass-login"
-                />
+                  id="pass-login"/>
               </div>
+              <label style="color: red">*</label><span> - required</span>
+              <br>
               <a class="btn btn-info" onclick="handleLogin()"
                 ><i class="fas fa-sign-in-alt"></i> Sign In</a
               >
@@ -259,7 +196,7 @@
               <div class="mb-3">
                 <label for="email-signup" class="form-label"
                   >Email address</label
-                >
+                ><label style="color: red">*</label>
                 <input
                   type="email"
                   class="form-control validate"
@@ -272,7 +209,7 @@
                 </div>
               </div>
               <div class="mb-3">
-                <label for="name-signup" class="form-label">Username</label>
+                <label for="name-signup" class="form-label">Username </label><label style="color: red">  *</label>
                 <input
                   type="text"
                   class="form-control validate"
@@ -285,7 +222,7 @@
                 </div>
               </div>
               <div class="mb-3">
-                <label for="PassSignUp" class="form-label">Password</label>
+                <label for="PassSignUp" class="form-label">Password </label><label style="color: red">  *</label>
                 <input
                   type="password"
                   class="form-control validate"
@@ -294,14 +231,16 @@
               </div>
               <div class="mb-3">
                 <label for="confPass" class="form-label"
-                  >Confirm Password</label
-                >
+                  >Confirm Password </label
+                ><label style="color: red">  *</label>
                 <input
                   type="password"
                   class="form-control validate"
                   id="confPass"
                 />
               </div>
+              <label style="color: red">*</label><span> - required</span>
+              <br>
               <a class="btn btn-info" onclick="handleSignUp()"
                 ><i class="fas fa-sign-in-alt"></i> Sign Up</a
               >
@@ -310,8 +249,34 @@
         </div>
       </div>
     </div>
+
+    <!--Footer-->
+    <footer class="site-footer">
+      <div class="container" style="text-align: center;">
+        <h5 class="text-uppercase p-1" style="font-size: 20px; color: black;">COMP1004 Security Dashboard</h5>
+        <a href="https://github.com/Parker06/CySecApp-COMP1004" target="_blank" class="btn btn-outline-light" id="github" role="button">Github Repository <i class="fab fa-github-square "></i></a>
+        <p class="para p-2" style="margin-top: 0.5rem; font-size: 20px; color: black;">
+            Copyright ©2021 University of Plymouth - only for showcasing purposes | Harry Parker
+        </p>
+      </div>
+    </footer>
+
+
+      <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+  
     <!--Charts JavaScript-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -329,6 +294,12 @@
         setTimeout(updateClock, 1000);
       }
       updateClock();
+      
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
+    
     </script>
   </body>
 </html>
