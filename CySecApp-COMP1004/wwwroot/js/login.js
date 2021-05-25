@@ -21,6 +21,10 @@ function ManagePage() {
   document.getElementById("header").innerHTML = "System Management";
 }
 
+function LoginPage() {
+  document.getElementById("header").innerHTML = "Sign In";
+  renderPage("app");
+}
 
 function createTable(doc){
   const table = document.getElementById("login-body");

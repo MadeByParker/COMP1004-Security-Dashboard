@@ -18,10 +18,7 @@
 
 
 //switch pages
-function LoginPage() {
-  document.getElementById("header").innerHTML = "Sign In";
-  $("#page-content-wrapper").load("app.html");
-}
+
 
 function HomeLogin() {
   $("#page-content-wrapper").load("homePanel.html");
