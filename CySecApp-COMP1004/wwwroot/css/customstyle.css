@@ -167,6 +167,7 @@ div#security, #problems, #Userstext{
 }
 
 
+
 .footer{
     bottom: 0;
     width: 100%;
@@ -302,6 +303,7 @@ div#security, #problems, #Userstext{
     }
 
 
+
 /*footer and general*/
 * {
     margin: 0;
@@ -312,14 +314,14 @@ div#security, #problems, #Userstext{
   .page-wrap {
     min-height: 100%;
     /* equal to footer height */
-    margin-bottom: -142px; 
+    margin-bottom: -162px; 
   }
   .page-wrap:after {
     content: "";
     display: block;
   }
   .site-footer, .page-wrap:after {
-    height: 160px; 
+    height: 200px; 
   }
   .site-footer {
     background: rgb(189, 189, 189);

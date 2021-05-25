@@ -28,31 +28,20 @@
     >
     <br />
     <div id="filterDates">
-      <div class="dropdown">
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          id="dropdownMenu2"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Filter Dates
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" id="Last24btn" type="button">
-            Last 24 hours
-          </button>
-          <button
-            class="dropdown-item"
+      <button
+      class="btn btn-primary sm-3"
+      type="button"
+      href="#"
             id="Last7Wbtn"
             onclick="weekhours()"
             type="button"
           >
             Last Week
           </button>
-          <button
-            class="dropdown-item"
+      <button
+        class="btn btn-primary sm-3"
+        type="button"
+        href="#"
             id="LastMonthbtn"
             onclick="monthhours()"
             type="button"
@@ -60,16 +49,16 @@
             Last Month
           </button>
           <button
-            class="dropdown-item"
+          class="btn btn-primary sm-3"
+          type="button"
+          href="#"
             id="AllTimebtn"
             onclick="UserPage()"
             type="button"
           >
             All Time
           </button>
-        </div>
       </div>
-    </div>
     <div id="Userstext">
       This graph shows the daily connections of users using their IPs to log on
       to their work systems If there's an anomaly it'll be detected and it will

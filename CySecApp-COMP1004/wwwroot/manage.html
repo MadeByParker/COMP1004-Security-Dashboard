@@ -34,6 +34,7 @@
     </style>
   </head>
   <body>
+    
     <div class="container" id="main">
       <h2>Logins</h2>
       <br />
@@ -50,16 +51,10 @@
       </ul>
 
       <!-- Tab panes -->
-      <div class="tab-content" style="
-      border: solid 3px black;
-      padding: 2rem 2rem 2rem 2rem;
-      margin-top: 2rem;
-    ">
+      <div class="tab-content">
         <div id="view" class="container tab-pane active">
           <br />
           <h3 style="margin-left: 5rem;">Logins</h3>
-          <h1 id="name"></h1>
-
           <!--view logins-->
           <table
             class="striped"
@@ -67,28 +62,22 @@
           >
             <thead>
               <tr>
-                <th style="width: fit-content;">Email</th>
-                <th style="width: fit-content;">Username</th>
-                <th style="width: 300px;">Password</th>
-                <th style="width: 150px;">Delete Login</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Delete Login</th>
               </tr>
             </thead>
             <tbody id="login-body"></tbody>
           </table>
-
-          <div id="delalert" class="toast" style="position: absolute; top: 150px; right: 10px; min-width: 250px; background-color: #d3d3d3;">
-            <div class="toast-header" style="background-color: gray; color: white;"> 
-              <strong style="font-size: 14px;" class="mr-auto">Update!</strong>
-              <small>Just now</small>
-            </div>
-            <div class="toast-body">
-              <strong><span id="text">Deleted Account</span></strong>
-            </div>
-          </div>
         </div>
 
 
-        <div id="update" class="container tab-pane fade">
+        <div id="update" style="
+        border: solid 3px black;
+        padding: 2rem 2rem 2rem 2rem;
+        margin-top: 2rem;
+      " class="container tab-pane fade">
           <br />
           <h3>Add Account</h3>
           

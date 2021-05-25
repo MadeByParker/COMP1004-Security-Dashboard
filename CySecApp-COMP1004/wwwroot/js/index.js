@@ -63,11 +63,6 @@ function InfoPage() {
   document.getElementById("header").innerHTML = "About Us";
 }
 
-function ManagePage() {
-  $("#page-content-wrapper").load("manage.html");
-  document.getElementById("header").innerHTML = "System Management";
-}
-
 function IPPage() {
   $("#page-content-wrapper").load("IP.html");
   document.getElementById("header").innerHTML = "Connections of IPs";

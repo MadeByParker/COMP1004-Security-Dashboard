@@ -16,6 +16,12 @@ var uid;
 
 //create elements and render table
 
+function ManagePage() {
+  renderPage("Manage");
+  document.getElementById("header").innerHTML = "System Management";
+}
+
+
 function createTable(doc){
   const table = document.getElementById("login-body");
   const tr = document.createElement("tr"); // Create a new table row
@@ -25,7 +31,6 @@ function createTable(doc){
   const deleteBtn = document.createElement("i"); // Create the delete icon
   deleteBtn.innerHTML = '<i class="far fa-minus-square fa-2x"></i>'
 
-  tr.setAttribute('data-id', doc.id);
   email.textContent = doc.data().email;
   username.textContent = doc.data().name;
   password.textContent = doc.data().password;
@@ -45,10 +50,8 @@ function createTable(doc){
         .then(function (){
           console.log('Login deleted ID:', doc.id);
           renderPage("Manage");
-          $('.toast').toast({animation: true, delay: 3000});
-          $('.toast').toast('show');
         })
-        .catch((error) =>{
+        .catch((error) => {
           console.log("Unable to delete login", error);
         })
       }
@@ -157,6 +160,7 @@ function handleSignUp(e) {
       var user = userCredential.user;
       uid = user.uid; // Get the user id
       renderPage("Manage");
+      
       db.collection("users").add({
         email: login,
         id: uid,
@@ -180,7 +184,9 @@ function handleSignUp(e) {
     var errorCode = error.code;
     var errorMessage = error.message;
     console.log(errorMessage);
-    // ..
+    if(errorMessage == "The email address is already in use by another account."){
+      alert("Email is in use");
+    }
   });
 }
 
