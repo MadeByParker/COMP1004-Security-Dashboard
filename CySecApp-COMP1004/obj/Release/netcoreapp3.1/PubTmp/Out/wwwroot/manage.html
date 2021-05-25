@@ -3,12 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bookings</title>
+    <title>Logins</title>
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
-
-    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    
+          
     <!-- CSS only -->
     <link
       rel="stylesheet"
@@ -30,17 +28,13 @@
         justify-content: center;
       }
 
-      #main {
-        background-color: rgb(222, 222, 222);
-        height: 60%;
-      }
-
       #update form {
         margin-top: 50px;
       }
     </style>
   </head>
   <body>
+    
     <div class="container" id="main">
       <h2>Logins</h2>
       <br />
@@ -60,38 +54,93 @@
       <div class="tab-content">
         <div id="view" class="container tab-pane active">
           <br />
-          <h3>Logins</h3>
-          <table id="viewtables" class="table"></table>
-
-          <div id="Deletealert" class="toast">
-            <div class="toast-header">Update</div>
-            <div id="messageedit" class="toast-body">Deleted User!</div>
-          </div>
+          <h3 style="margin-left: 5rem;">Logins</h3>
+          <!--view logins-->
+          <table
+            class="striped"
+            style="background-color: white; border-radius: 2px; padding: 5px; width: 50vw"
+          >
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Delete Login</th>
+              </tr>
+            </thead>
+            <tbody id="login-body"></tbody>
+          </table>
         </div>
-        <div id="update" class="container tab-pane fade">
+
+
+        <div id="update" style="
+        border: solid 3px black;
+        padding: 2rem 2rem 2rem 2rem;
+        margin-top: 2rem;
+      " class="container tab-pane fade">
           <br />
           <h3>Add Account</h3>
-          <form id="booking">
+          
+          <form id="add-login-form">
             <div class="mb-3">
-              <label for="FirstNameInput" class="form-label">User Name</label>
-              <input type="text" class="form-control" id="FirstNameInput" />
+              <label for="email-signup" class="form-label"
+                >Email address </label
+              ><label style="color: red">  *</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control validate"
+                id="email-signup"
+                aria-describedby="emailHelp"
+                value="email@example.com"
+              />
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
             </div>
             <div class="mb-3">
-              <label for="LastNameInput" class="form-label">Password</label>
-              <input type="text" class="form-control" id="LastNameInput" />
+              <label for="name-signup" class="form-label">Username </label><label style="color: red">  *</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control validate"
+                id="name-signup"
+                aria-describedby="nameHelp"
+                value="bobdavey12345"
+              />
+              <div id="nameHelp" class="form-text">
+                This is your username and ID
+              </div>
             </div>
-            <a id="save" class="btn btn-info"
-              ><i class="fas fa-save"></i> Save</a
+            <div class="mb-3">
+              <label for="PassSignUp" class="form-label">Password </label><label style="color: red">  *</label>
+              <input
+                type="password"
+                name="intPassword"
+                class="form-control validate"
+                id="PassSignUp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="confPass" class="form-label"
+                >Confirm Password</label
+              ><label style="color: red">*</label>
+              <input
+                type="password"
+                name="confPassword"
+                class="form-control validate"
+                id="confPass"
+              />
+            </div>
+            <label style="color: red">*</label><span> - required</span>
+            <br> 
+            <a class="btn btn-info" id="additem" onclick="addLogin()"
+              ><i class="fas fa-sign-in-alt"></i> Sign Up</a
             >
+
+            
           </form>
 
-          <div id="Savealert" class="toast">
-            <div class="toast-header">Update</div>
-            <div id="message" class="toast-body">Saved!</div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!--JS-->
     <script src="./js/login.js"></script>
     <script src="./js/index.js"></script>
@@ -102,5 +151,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+          <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    
+      <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    
+      <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+    
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
   </body>
 </html>

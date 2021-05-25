@@ -6,9 +6,5 @@
     <UserSecretsId>5203b258-16ac-44a2-968a-5c99fc53ca4d</UserSecretsId>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="logins.csv" />
-  </ItemGroup>
-
 
 </Project>
