@@ -1,6 +1,6 @@
 # CySecApp 1004
 
-Website: https://cysecapp.azurewebsites.net/app
+Website: https://cysecapp.azurewebsites.net/
 
 This is a security Dashboard that I'm making for my COMP1004 Module. It's a single page web application, which displays data about how many users connect to the systems, system statuses and health, security alerts and system alerts.
 
