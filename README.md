@@ -13,3 +13,40 @@ It uses:
 * Bootstrap Lux for the Graphics/ Visuals
 * Photoshop for graphics
 
+## Screenshots: 🖼
+
+### Home Page of CySecApp
+
+![Home Page](https://github.com/Parker06/COMP1004-Security-Dashboard/blob/main/Home.png)
+
+### Logging In
+
+![Logging In](https://github.com/Parker06/COMP1004-Security-Dashboard/blob/main/Login_page.png)
+
+### System Admin Management 
+
+![System Management](https://github.com/Parker06/COMP1004-Security-Dashboard/blob/main/Management.png)
+
+### Listing Current System Issues
+
+![Current Issues](https://github.com/Parker06/COMP1004-Security-Dashboard/blob/main/Current_Issues.png)
+
+### Listing Security-Related Issues
+
+![Security Issues](https://github.com/Parker06/COMP1004-Security-Dashboard/blob/main/Security.png)
+
+### Showing System Statuses
+
+![System Status](https://github.com/Parker06/COMP1004-Security-Dashboard/blob/main/Status.png)
+
+### Listing Users
+
+![Listing Users](https://github.com/Parker06/COMP1004-Security-Dashboard/blob/main/Users.png)
+
+### Listing IP Addresses
+
+![Listing IP Addresses](https://github.com/Parker06/COMP1004-Security-Dashboard/blob/main/IPs.png)
+
+### Malware Management
+
+![Malware Management](https://github.com/Parker06/COMP1004-Security-Dashboard/blob/main/Malware.png)
