@@ -7,7 +7,7 @@ This is a security Dashboard that I'm making for my COMP1004 Module. It's a sing
 It uses:
 
 * HTML, CSS, JavaScript 
-* C# ASP.NET Backend to store data digitally e.g. history, logins
+* C# ASP.NET Backend to store data digitally e.g. history, logins alongside Google Firebase's Authenication and Firestore Databases - [Auth](https://firebase.google.com/docs/auth) and [Database](https://firebase.google.com/docs/firestore)
 * JSON arrays or .CSV files to store data for graphs
 * Chart.js to display graphs
 * Bootstrap Lux for the Graphics/ Visuals
