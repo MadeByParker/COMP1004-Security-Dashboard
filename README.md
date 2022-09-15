@@ -1,5 +1,7 @@
 # CySecApp 1004
 
+Results: 85/100
+
 Website: https://cysecapp.azurewebsites.net/
 
 [Explanation Video](https://youtu.be/Pv2rUj2uBF0)
