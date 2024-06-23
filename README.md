@@ -3,11 +3,10 @@
 Results: 85/100
 
 Website: https://cysecapp.azurewebsites.net/
-[Explanation Video](https://youtu.be/Pv2rUj2uBF0)
 
-### This is a security Dashboard that I'm making for my COMP1004 Module. It's a single page web application, which displays data about how many users connect to the systems, system statuses and health, security alerts and system alerts.
+This is a security Dashboard that I'm making for my COMP1004 Module. It's a single page web application, which displays data about how many users connect to the systems, system statuses and health, security alerts and system alerts.
 
-## It uses:
+It uses:
 
 * HTML, CSS, JavaScript 
 * C# ASP.NET Backend to store data digitally e.g. history, logins alongside Google Firebase's Authenication and Firestore Databases - [Auth](https://firebase.google.com/docs/auth) and [Database](https://firebase.google.com/docs/firestore)
